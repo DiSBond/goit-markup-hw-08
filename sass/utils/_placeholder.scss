@@ -1,0 +1,16 @@
+%link {
+  text-decoration: none;
+}
+%link:visited {
+  color: $main-text-color;
+}
+
+%list {
+  list-style: none;
+}
+
+%container {
+  padding: 0 15px;
+  margin-left: auto;
+  margin-right: auto;
+}

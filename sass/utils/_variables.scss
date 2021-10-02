@@ -1,0 +1,58 @@
+$main-title-color: #fff;
+$secondary-title-color: #212121;
+$main-text-color: #212121;
+$secondery-text-color: #757575;
+$accent-color: #2196f3;
+$main-backround-color: #2f303a;
+$secondary-bacground-color: #2196f3;
+$third-bacground-color: #f5f4fa;
+$main-basic-white: #fff;
+$border-color: #ececec;
+$icon-colors: #afb1b8;
+
+@mixin raleway($font-weight, $font-size) {
+  font-family: "Raleway", sans-serif;
+  font-weight: $font-weight;
+  font-size: $font-size;
+}
+
+@mixin roboto($font-weight, $font-size, $line-height, $letter-spacing) {
+  font-family: "Roboto", sans-serif;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+}
+
+// @mixin bolt-title {
+//   font-weight: 900;
+//   font-size: 44px;
+//   line-height: 1.36;
+//   letter-spacing: 0.06em;
+//   text-transform: uppercase;
+//   color: $main-title-color;
+// }
+
+@mixin button {
+  text-decoration: none;
+  display: inline-block;
+
+  font-family: inherit;
+  margin-top: 30px;
+  padding: 10px 32px 10px 32px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  background-color: $secondary-bacground-color;
+  color: $main-title-color;
+  min-width: 200px;
+  border-radius: 4px;
+
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  transition: 250ms;
+}
+
+@mixin transition($transition-property) {
+  transition: $transition-property 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}

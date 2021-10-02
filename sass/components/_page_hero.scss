@@ -1,0 +1,84 @@
+.hero {
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../../image/hero-background.png);
+  text-align: center;
+  padding: 118px 60px;
+  max-width: 1600px;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__title {
+    display: block;
+    @include roboto(900, 26px, 1.62, 0.06em);
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+  }
+}
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../image/hero-background-2x.png);
+  }
+}
+@media (min-device-pixel-ratio: 3),
+  (min-resolution: 298dpi),
+  (min-resolution: 3dppx) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../image/hero-background-3x.png);
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../image/hero-background-tab.png);
+    background-size: cover;
+  }
+}
+// $font-weight, $font-size, $line-height, $letter-spacing
+.hero__button {
+  @include button;
+
+  &:hover {
+    background: $third-bacground-color;
+    box-shadow: 0px 10px 30px rgba(33, 150, 243, 0.8);
+    color: $accent-color;
+    transform: translateY(-7px);
+  }
+}
+
+@media (min-width: 1600px) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../image/hero-background.png);
+    text-align: center;
+    padding: 200px 0px;
+    max-width: 1600px;
+    margin: 0 auto;
+
+    &__title {
+      @include roboto(900, 44px, 1.36, 0.06em);
+    }
+  }
+}

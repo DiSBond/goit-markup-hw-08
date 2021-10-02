@@ -1,0 +1,19 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+body {
+  font-family: "roboto", sans-serif;
+  color: $main-text-color;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: $main-text-color;
+}

@@ -1,0 +1,278 @@
+.header {
+  border-bottom: 1px solid $border-color;
+  padding: 10px 0;
+
+  &__container {
+    @extend %container;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.logo {
+  @extend %link;
+  @include raleway(700, 26px);
+
+  &__text {
+    color: $accent-color;
+  }
+}
+
+.contacts {
+  @extend %list;
+}
+
+@media screen and (max-width: 767px) {
+  .menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 48px 40px;
+    background-color: #fff;
+    z-index: 998;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    transform: translateX(100%);
+    transition: transform 250ms ease-in-out;
+  }
+
+  .menu-container.is-open {
+    transform: translateX(0);
+  }
+
+  .menu-toggle {
+    min-height: 40px;
+    min-width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+
+  .menu-toggle:hover,
+  .menu-toggle:focus {
+    fill: $accent-color;
+  }
+
+  .menu-container .menu-toggle {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #fff;
+  }
+
+  .nav {
+    @include roboto(500, 40px, 1.17, 0.02em);
+
+    &__item + &__item {
+      margin-top: 32px;
+    }
+
+    &__link:hover,
+    &__link:focus {
+      color: $accent-color;
+    }
+
+    &__link.nav__link--current {
+      color: $accent-color;
+    }
+  }
+  .contacts {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 64px;
+
+    &__phone {
+      @include roboto(500, 34px, 1.18, 0.02em);
+      color: $accent-color;
+    }
+
+    &__email {
+      @include roboto(500, 24px, 1.17, 0.02em);
+      color: $secondery-text-color;
+    }
+    &__icon {
+      display: none;
+    }
+
+    &__item:not(:last-child) {
+      margin-top: 32px;
+    }
+  }
+
+  .menu-socials {
+    @include roboto(500, 18px, 1.22, 0.02em);
+    display: flex;
+
+    &__item + &__item {
+      margin-left: 20px;
+    }
+
+    &__link {
+      color: $accent-color;
+    }
+  }
+
+  .menu-socials__item:not(:nth-child(1)) .menu-socials__link::after {
+    position: absolute;
+    display: block;
+    transform: translateX(-10px) translateY(-22px);
+    content: "";
+    height: 22px;
+    width: 2px;
+    z-index: 999;
+    background-color: rgba(33, 33, 33, 0.2);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    padding: 0px;
+  }
+
+  .nav {
+    @include roboto(500, 14px, 1.14, 0.02em);
+    margin-right: 84px;
+
+    &__list {
+      display: flex;
+    }
+
+    &__item:not(:last-child) {
+      margin-right: 50px;
+    }
+
+    &__link {
+      padding: 32px 0px;
+      display: block;
+      position: relative;
+      @include transition(color);
+    }
+    &__link:hover,
+    &__link:focus {
+      color: $accent-color;
+    }
+
+    &__link::after {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 100%;
+      height: 4px;
+      background-color: $accent-color;
+      bottom: 0;
+      border-radius: 2px;
+
+      transform: scaleX(0);
+      @include transition(transform);
+    }
+
+    &__link:hover::after {
+      transform: scale(1);
+    }
+
+    &__link.nav__link--current {
+      color: $accent-color;
+    }
+
+    &__link.nav__link--current::after {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 100%;
+      height: 4px;
+      background-color: $accent-color;
+      bottom: 0;
+      border-radius: 2px;
+
+      transform: scale(1);
+    }
+  }
+
+  .menu-socials {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .menu-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .contacts {
+    &__email,
+    &__phone {
+      @include roboto(500, 12px, 1.14, 0.02em);
+      color: $secondery-text-color;
+      @include transition(color);
+    }
+
+    &__item + &__item {
+      margin-top: 10px;
+    }
+
+    &__email:hover,
+    &__email:focus,
+    &__phone:focus,
+    &__phone:hover {
+      color: $accent-color;
+    }
+
+    &__icon {
+      margin-right: 10px;
+      fill: currentColor;
+      vertical-align: middle;
+    }
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .header {
+    &__container {
+      width: 1200px;
+      align-items: center;
+    }
+  }
+
+  .nav {
+    margin-right: 305px;
+    @include roboto(500, 14px, 1.14, 0.02em);
+
+    &__item:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+
+  .contacts {
+    display: flex;
+    flex-direction: row;
+
+    &__phone {
+      @include roboto(500, 14px, 1.18, 0.02em);
+    }
+
+    &__email {
+      @include roboto(500, 14px, 1.17, 0.02em);
+    }
+
+    &__item:not(:last-child) {
+      margin-right: 30px;
+    }
+
+    &__item + &__item {
+      margin-top: 0px;
+    }
+  }
+}

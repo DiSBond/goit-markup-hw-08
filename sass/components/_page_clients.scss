@@ -1,0 +1,92 @@
+.clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  &__container {
+    @extend %container;
+  }
+
+  &__title {
+    @include roboto(700, 28px, 1.17, 0.03em);
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    margin: -15px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    margin: 15px;
+    width: calc((100% - 4 * 15px) / 2);
+    height: 92px;
+
+    text-align: center;
+  }
+
+  &__link {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $icon-colors;
+    border-radius: 4px;
+
+    @include transition(border);
+  }
+
+  &__icon {
+    @include transition(fill);
+    fill: $icon-colors;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    border: 1px solid $accent-color;
+  }
+
+  &__link:hover &__icon,
+  &__link:focus &__icon {
+    fill: $accent-color;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .clients {
+    padding: 60px 0px;
+
+    &__list {
+      margin: -15px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      margin: 15px;
+      width: calc((100% - 6 * 15px) / 3);
+
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .clients {
+    padding: 94px 0;
+    &__container {
+      width: 1200px;
+    }
+
+    &__title {
+      @include roboto(700, 36px, 1.17, 0.03em);
+      margin-bottom: 50px;
+    }
+
+    &__item {
+      width: calc((100% - 12 * 15px) / 6);
+    }
+  }
+}
