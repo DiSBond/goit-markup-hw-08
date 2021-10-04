@@ -3,6 +3,7 @@
 
   &__container {
     @extend %container;
+    width: 480px;
   }
 
   &__nav {
@@ -147,6 +148,10 @@
   .portfolio {
     &__nav {
       justify-content: center;
+    }
+
+    &__container {
+      width: 768px;
     }
   }
 }

@@ -1,5 +1,6 @@
 .features__container {
   @extend %container;
+  width: 480px;
 }
 .features {
   padding: 60px 0;
@@ -8,9 +9,6 @@
     @extend %list;
   }
 
-  &__item:not(:last-child) {
-    margin-bottom: 30px;
-  }
   &__title {
     @include roboto(700, 14px, 1.14, 0.03em);
     text-transform: uppercase;
@@ -31,6 +29,14 @@
   }
 }
 
+@media screen and (max-width: 767px) {
+  .features {
+    &__item:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
 @media screen and (min-width: 768px) {
   .features {
     &__list {
@@ -42,6 +48,10 @@
     &__item {
       margin: 15px;
       width: calc((100% - 4 * 15px) / 2);
+    }
+
+    &__container {
+      width: 768px;
     }
   }
 }

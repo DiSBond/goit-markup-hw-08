@@ -4,6 +4,7 @@
 
   &__container {
     @extend %container;
+    width: 480px;
   }
 
   &__title {
@@ -70,10 +71,14 @@
 
       text-align: center;
     }
+
+    &__container {
+      width: 768px;
+    }
   }
 }
 
-@media screen and (min-width: 1140px) {
+@media screen and (min-width: 1200px) {
   .clients {
     padding: 94px 0;
     &__container {
