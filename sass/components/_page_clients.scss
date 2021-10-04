@@ -4,7 +4,6 @@
 
   &__container {
     @extend %container;
-    width: 480px;
   }
 
   &__title {
@@ -52,6 +51,11 @@
   &__link:hover &__icon,
   &__link:focus &__icon {
     fill: $accent-color;
+  }
+}
+@media screen and (min-width: 480px) {
+  .clients__container {
+    width: 480px;
   }
 }
 

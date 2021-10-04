@@ -3,7 +3,6 @@
 
   &__container {
     @extend %container;
-    width: 480px;
   }
 
   &__nav {
@@ -131,6 +130,12 @@
   &__link:hover &__text {
     transform: translateY(0);
     color: #ffffff;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .portfolio__container {
+    width: 480px;
   }
 }
 

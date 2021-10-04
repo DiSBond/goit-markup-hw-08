@@ -5,7 +5,6 @@
 
   &__container {
     @extend %container;
-    width: 480px;
   }
 
   &__title {
@@ -83,6 +82,12 @@
   &__link:hover,
   &__link:focus {
     background-color: $accent-color;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .team__container {
+    width: 480px;
   }
 }
 

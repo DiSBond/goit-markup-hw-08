@@ -1,6 +1,5 @@
 .features__container {
   @extend %container;
-  width: 480px;
 }
 .features {
   padding: 60px 0;
@@ -26,6 +25,12 @@
     padding-bottom: 25px;
     margin-bottom: 30px;
     text-align: center;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .features__container {
+    width: 480px;
   }
 }
 

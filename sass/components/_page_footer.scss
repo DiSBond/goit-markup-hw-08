@@ -6,7 +6,6 @@
   &__container {
     @extend %container;
     text-align: center;
-    width: 480px;
   }
 
   &__thumb:nth-child(2) {
@@ -128,6 +127,12 @@
   &__phone {
     @include transition(color);
     color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .footer__container {
+    width: 480px;
   }
 }
 
