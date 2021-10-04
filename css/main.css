@@ -63,7 +63,6 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 480px;
 }
 
 .logo {
@@ -74,6 +73,12 @@ a {
 
 .logo__text {
   color: #2196f3;
+}
+
+@media screen and (min-width: 480px) {
+  .header__container {
+    width: 480px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -96,16 +101,16 @@ a {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
     -webkit-transition: -webkit-transform 250ms ease-in-out;
     transition: -webkit-transform 250ms ease-in-out;
     transition: transform 250ms ease-in-out;
     transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
   }
   .menu-container.is-open {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
   .menu-toggle {
     min-height: 40px;
