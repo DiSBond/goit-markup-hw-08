@@ -311,7 +311,7 @@ a {
   }
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1200px) {
   .header__container {
     width: 1200px;
     -webkit-box-align: center;
@@ -405,6 +405,20 @@ a {
   }
 }
 
+@media (min-width: 768px) and (min-device-pixel-ratio: 2), (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 192dpi), (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../image/hero-background-tab-2x.png);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/hero-background-tab-2x.png);
+  }
+}
+
+@media (min-width: 768px) and (min-device-pixel-ratio: 3), (min-width: 768px) and (-webkit-min-device-pixel-ratio: 3.1041666666666665), (min-width: 768px) and (min-resolution: 298dpi), (min-width: 768px) and (-webkit-min-device-pixel-ratio: 3), (min-width: 768px) and (min-resolution: 3dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../image/hero-background-tab-3x.png);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/hero-background-tab-3x.png);
+  }
+}
+
 .hero__button {
   text-decoration: none;
   display: inline-block;
@@ -434,7 +448,7 @@ a {
           transform: translateY(-7px);
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1200px) {
   .hero {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../image/hero-background.png);
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/hero-background.png);
@@ -504,7 +518,7 @@ a {
   }
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1200px) {
   .features__container {
     width: 1200px;
   }
@@ -532,7 +546,7 @@ a {
   display: none;
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1200px) {
   .work {
     display: block;
     padding-bottom: 94px;
@@ -732,7 +746,7 @@ a {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .team__container {
     width: 1200px;
   }
@@ -871,7 +885,7 @@ a {
   }
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1140px) {
   .clients {
     padding: 94px 0;
   }
@@ -1106,7 +1120,7 @@ a {
   }
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1200px) {
   .footer {
     background-color: #2f303a;
     padding-top: 60px;
@@ -1568,7 +1582,7 @@ a {
   }
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1200px) {
   .modal {
     width: 528px;
   }
@@ -1758,7 +1772,7 @@ a {
   }
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1200px) {
   .portfolio {
     padding: 94px 0px;
   }
